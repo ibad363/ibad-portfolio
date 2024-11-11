@@ -32,7 +32,7 @@ const About = () => {
                           Simultaneously, I'm expanding my technical skills through the Governor Sindh Initiative in Applied Cloud Generative AI Engineering (GIAIC). With months of intensive training in modern web technologies like HTML, CSS, JavaScript, and Next.js, I've successfully completed my first quarter. My unique blend of commerce knowledge and technical expertise equips me to create more human-centered digital solutions, bridging the gap between technology and practical, user-focused applications.
                         </p>
                         
-                        <a href="/assets/CV-02/ibad-cv.pdf" target="_blank" rel="noopener noreferrer">
+                        <a href="/assets/cv.pdf" target="_blank" rel="noopener noreferrer">
                             <button className="inline-flex items-center text-gray-900 bg-gradient-to-r from-emerald-400 to-cyan-400 border-0 py-2 px-8 
                             focus:outline-none hover:from-emerald-500 hover:to-cyan-500 rounded-lg text-lg transition-all duration-300 font-semibold">
                                 View CV
