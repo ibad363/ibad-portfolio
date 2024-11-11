@@ -25,13 +25,13 @@ const Hero = () => {
                     </p>
                     
                     <div className="flex gap-4">
-                        <Link href={"#Contact"}>
+                        <Link href={"/contact"}>
                             <button className="inline-flex items-center text-gray-900 bg-gradient-to-r from-emerald-400 to-cyan-400 border-0 py-2 px-6 
                             focus:outline-none hover:from-emerald-500 hover:to-cyan-500 rounded-lg text-lg transition-all duration-300 font-semibold">
                               Contact Me
                             </button>
                         </Link>
-                        <Link href={"#project"}>
+                        <Link href={"/projects"}>
                             <button className="inline-flex items-center text-emerald-400 border-2 border-emerald-400 py-2 px-6 
                             focus:outline-none hover:bg-emerald-400 hover:text-gray-900 rounded-lg text-lg transition-all duration-300 font-semibold">
                                 My Projects
