@@ -17,9 +17,9 @@ const Contact = () => {
               marginWidth={0}
               scrolling="no"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14478.981667936244!2d67.19999716977537!3d24.893431199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33c1f22df5555%3A0x27f12e1d84f4d92e!2sMalir%20Kala%20Board%2C%20Malir%20Town%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1710871234567!5m2!1sen!2s"
-              style={{ filter: "grayscale(1) contrast(1.2) opacity(0.16)" }}
+              style={{ filter: "grayscale(1) contrast(1.2) opacity(0.26)" }}
             />
-            <div className="bg-gray-900/80 backdrop-blur-sm relative flex flex-wrap py-6 rounded-lg shadow-xl border border-emerald-500/20">
+            <div className="bg-gray-900/80 backdrop-blur-sm relative flex flex-wrap py-6 pr-6 rounded-lg shadow-xl border border-emerald-500/20">
               <div className="lg:w-1/2 px-6">
                 <h2 className="title-font font-semibold text-emerald-400 tracking-widest text-xs">
                   ADDRESS
@@ -115,6 +115,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-
-
