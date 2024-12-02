@@ -1,37 +1,35 @@
-"use client"
-import React from "react";
 import Image from "next/image";
-import profile from '../../public/assets/ibad.png'
 import Link from "next/link";
 
-const Hero = () => {
-    return(
-        <section className="text-gray-300 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900">
-            <div className="mx-auto px-16 py-20 flex flex-col md:flex-row items-center">
-                {/* first section */}
-                <div className="flex flex-col items-center md:items-start w-full md:w-1/2 md:flex-grow md:pr-16 lg:pr-24 mb-16 md:mb-0 text-center md:text-left">
-                    <h1 className="text-4xl font-bold mb-2">Hi, I'm <span className="text-emerald-400">Ibad Ur Rehman</span></h1>
-                    <h3 className="font-bold text-3xl mb-4">Frontend Developer</h3>
-                    <div className="w-36 h-1 rounded-lg bg-emerald-500 mb-4"></div>
-                    <p className="mb-8 text-lg leading-relaxed">Passionate Frontend Developer with expertise in modern web technologies. Specializing in creating responsive, user-friendly applications with clean and efficient code. Committed to delivering innovative solutions that make a real impact.</p>
-                    <div className="flex gap-3">
-                        <Link href={"/contact"}><button className="bg-gradient-to-r from-emerald-400 to-cyan-400 text-gray-900 text-lg font-semibold px-6 py-2 rounded-lg focus:outline-none hover:from-emerald-500 hover:to-cyan-500 ">Contact Me</button></Link>
-                        <Link href={"/projects"}><button className="border-emerald-400 text-emerald-400 font-semibold text-lg border-2 py-2 px-6 rounded-lg focus:outline-none hover:bg-emerald-400 hover:text-gray-900">My Projects</button></Link>
-                    </div>
-                </div>
-                {/* second section */}
-                <div className="md:w-[40%] w-full inline-flex justify-center">
-                    <Image
-                    src={profile}
-                    alt="Profile Photo"
-                    width={400}
-                    height={400}
-                    className="rounded-full object-cover shadow-2xl shadow-emerald-400/20 hover:scale-105 transition-transform duration-300"
-                    />
-                </div>
+export default function Hero() {
+  return (
+    <div className="text-gray-300 flex flex-col md:flex-row md:pl-8 md:pr-6 md:py-14 p-4">
+        {/* Text Section */}
+        <div className="w-full md:w-[60%] lg:w-1/2 p-6 flex flex-col items-center md:items-start my-auto gap-5">
+            <div className="font-bold flex flex-col items-center md:items-start gap-3">
+                <h1 className="text-3xl md:text-4xl text-center md:text-start">Hi, I'm <span className="text-emerald-400">Ibad Ur Rehman</span></h1>
+                <h3 className="text-2xl md:text-3xl">Frontend Developer</h3>
+                <div className="w-36 h-1 bg-emerald-500 rounded-lg"></div>
             </div>
-        </section>
-    )
-}
+            <p className="text-gray-300 text-lg text-center md:text-start px-0 sm:px-14 md:px-0">Passionate Frontend Developer with expertise in modern web technologies. Specializing in creating responsive, user-friendly applications with clean and efficient code. Committed to delivering innovative solutions that make a real impact.</p>
+            
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row items-center gap-5">
+                <Link href={"/contact"}><button className="bg-gradient-to-r from-emerald-400 to-cyan-400 text-gray-900 text-lg font-semibold rounded-lg py-2 px-6 hover:from-emerald-500 hover:to-cyan-500 transition-all duration-300 focus:outline-none">Contact Me</button></Link>
+                <Link href={"/projects"}><button className="border-2 border-emerald-400 text-emerald-400 text-lg font-semibold rounded-lg px-6 py-2 focus:outline-none hover:bg-emerald-400 hover:text-gray-900 transition-all duration-300">My Projects</button></Link>
+            </div>
+        </div>
 
-export default Hero
+        {/* Image Section */}
+        <div className="w-[90%] md:w-[40%] lg:w-1/2 mx-auto flex items-center mt-6 md:mt-0">
+           <Image
+           src={"/assets/ibad.png"}
+           alt="Profile Photo"
+           width={400}
+           height={400}
+           className="rounded-full object-cover mx-auto shadow-2xl shadow-emerald-400/20 transition-transform hover:scale-105 duration-500"
+           ></Image>
+        </div>
+    </div>
+  )
+}
