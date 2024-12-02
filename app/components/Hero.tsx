@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="w-full md:w-[60%] lg:w-1/2 p-6 flex flex-col items-center md:items-start my-auto gap-5">
             <div className="font-bold flex flex-col items-center md:items-start gap-3">
                 <h1 className="text-3xl md:text-4xl text-center md:text-start">Hi, I'm <span className="text-emerald-400">Ibad Ur Rehman</span></h1>
-                <h3 className="text-2xl md:text-3xl">Frontend Developer</h3>
+                <h3 className="text-2xl md:text-3xl text-center md:text-start">Frontend Developer</h3>
                 <div className="w-36 h-1 bg-emerald-500 rounded-lg"></div>
             </div>
             <p className="text-gray-300 text-lg text-center md:text-start px-0 sm:px-14 md:px-0">Passionate Frontend Developer with expertise in modern web technologies. Specializing in creating responsive, user-friendly applications with clean and efficient code. Committed to delivering innovative solutions that make a real impact.</p>
