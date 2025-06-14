@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap" id="contact">
         {/* Map Section */}
         <div className="w-full md:w-1/2 h-[25rem] md:h-[34rem] p-6 flex items-end justify-center">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14477.276043258822!2d67.18732505!3d24. 8870979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb339e2c516a007%3A0xc41b941a59b9ffaa!2sKala%20Board%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh!5e0!3m2!1sen!2s!4v1732992046733!5m2!1sen!2s" 

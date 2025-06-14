@@ -4,14 +4,15 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
+const inter = localFont({
+  src: "./fonts/Inter.ttf",
+  variable: "--font-inter",
   weight: "100 900",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
+
+const interBold = localFont({
+  src: "./fonts/Inter_Bold.ttf",
+  variable: "--font-inter-bold",
   weight: "100 900",
 });
 
@@ -28,11 +29,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased ${"bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 mx-auto max-w-[110rem]"}`}
+        className={`font-inter ${inter.variable} ${interBold.variable} antialiased bg-[#1E201E]`}
       >
-        <Navbar/>
-        {children}
-        <Footer/>
+        <Navbar />
+        <div className="mx-auto max-w-[110rem]">
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );
