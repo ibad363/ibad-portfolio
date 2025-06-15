@@ -1,11 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
-import { RESUME_DATA } from "../data/resume-data"
+import { RESUME_DATA } from "../app/data/resume-data"
 
 const About = () => {
   return (
     <div className="py-8 flex flex-col md:flex-row" id="about">
-
         {/* Image Section */}
         <div className="w-[90%] md:w-[50%] lg:w-[40%] p-4 mx-auto">
             <Image

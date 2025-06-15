@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { RESUME_DATA } from "../data/resume-data";
+import { RESUME_DATA } from "../app/data/resume-data";
 import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
-    <div className="text-primary-foreground flex flex-col md:flex-row md:pl-8 md:pr-6 md:py-14 p-4">
+    <div className="text-primary-foreground flex flex-col md:flex-row p-4 md:py-14 md:px-12">
       {/* Text Section */}
       <div className="w-full md:w-[60%] lg:w-1/2 p-6 flex flex-col items-center md:items-start my-auto gap-5">
         <div className="font-bold flex flex-col items-center md:items-start gap-3">

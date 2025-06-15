@@ -1,9 +1,9 @@
 import { ProjectCard } from "./ProjectCard";
-import { RESUME_DATA } from "../data/resume-data";
+import { RESUME_DATA } from "../app/data/resume-data";
 
 function Projects() {
   return (
-    <div className="p-6" id="projects">
+    <div className="p-4 md:py-14 md:px-12" id="projects">
       {/* Heading & Paragraph */}
       <div className="flex flex-col items-center gap-3">
         <h1 className="text-secondary-foreground text-3xl md:text-4xl font-bold tracking-wider">Projects I’ve Built</h1>

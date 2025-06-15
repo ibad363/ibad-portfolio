@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { AiOutlineCloudDownload } from "react-icons/ai";
-import { RESUME_DATA } from "../data/resume-data";
+import { RESUME_DATA } from "../app/data/resume-data";
 
 const Navbar = () => {
   return (
@@ -14,6 +14,7 @@ const Navbar = () => {
               <nav className="flex flex-wrap justify-center gap-3 md:gap-5 text-secondary-foreground">
                   <NavLinks navItems={"Home"} link={"/"}/>
                   <NavLinks navItems={"About"} link={"/#about"}/>
+                  <NavLinks navItems={"Education"} link={"/#education"}/>
                   <NavLinks navItems={"Skills"} link={"/#skills"}/>
                   <NavLinks navItems={"Projects"} link={"/#projects"}/>
                   <NavLinks navItems={"Contact"} link={"/#contact"}/>

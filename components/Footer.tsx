@@ -1,12 +1,12 @@
 import { FaLinkedin } from "react-icons/fa";
 import Link from 'next/link';
-import { RESUME_DATA } from "../data/resume-data";
+import { RESUME_DATA } from "../app/data/resume-data";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   return (
     <div className="border-t-2">
-      <footer className=" p-3 flex flex-col sm:flex-row items-center justify-between gap-2 mx-auto max-w-[110rem]">
+      <footer className="px-10 p-3 flex flex-col sm:flex-row items-center justify-between gap-2 mx-auto max-w-[110rem]">
         
         {/* Name */}
         <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-6">

@@ -1,8 +1,8 @@
-import { RESUME_DATA } from "../data/resume-data";
+import { RESUME_DATA } from "../app/data/resume-data";
 
 export default function Skills() {
   return (
-    <section className="py-14 px-4 md:px-12" id="skills">
+    <section className="p-4 md:pt-14 md:pb-10 md:px-12" id="skills">
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-secondary-foreground">Skills</h2>
         <div className="w-16 h-1 bg-muted-foreground mx-auto mt-3 rounded"></div>

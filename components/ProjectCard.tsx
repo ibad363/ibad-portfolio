@@ -17,7 +17,7 @@ interface Props {
 
 export function ProjectCard({ title, description, tags, link }: Props) {
   return (
-    <Card className="group relative flex flex-col border border-gray-800/50 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-md transition hover:scale-[1.015] hover:shadow-lg hover:border-gray-400/30 hover:border-2 duration-300 overflow-hidden">
+    <Card className="group relative flex flex-col border border-gray-800/50 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-md transition hover:scale-[1.015] hover:shadow-lg hover:border-gray-400/30 hover:border-1 duration-300 overflow-hidden">
       <CardHeader className="pb-2 space-y-1">
         <CardTitle className="text-base font-semibold text-white group-hover:text-gray-100 transition-colors duration-200">
           {link ? (
