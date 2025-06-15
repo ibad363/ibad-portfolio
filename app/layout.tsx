@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = localFont({
   src: "./fonts/Inter.ttf",
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body
         className={`font-inter ${inter.variable} ${interBold.variable} antialiased bg-[#1E201E]`}
       >
+        <Analytics/>
         <Navbar />
         <div className="mx-auto max-w-[110rem]">
           {children}
