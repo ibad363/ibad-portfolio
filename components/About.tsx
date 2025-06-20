@@ -8,11 +8,11 @@ const About = () => {
         {/* Image Section */}
         <div className="w-[90%] md:w-[50%] lg:w-[40%] p-4 mx-auto">
             <Image
-                src={"/assets/ibad.png"}
+                src={RESUME_DATA.profilePicPath}
                 alt="Profile Photo"
                 width={400}
                 height={400}
-                className="rounded-lg object-cover mx-auto shadow-xl shadow-secondary-foreground/20 transform hover:scale-105 transition-transform duration-300"
+                className="rounded-lg object-cover mx-auto border-2 border-secondary-foreground transform hover:scale-105 transition-transform duration-300"
             ></Image>
         </div>
 

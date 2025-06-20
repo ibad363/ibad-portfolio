@@ -16,8 +16,9 @@ import { BiMessageDetail } from "react-icons/bi";
 export const RESUME_DATA = {
     name: "Ibad Ur Rehman",
     location: "Based in Karachi Pakistan",
-    locationLink: "",
+    locationLink: "https://www.google.com/maps/place/Karachi",
     resumePath: "/assets/Ibad_Ur_Rehman_Frontend_Developer_Resume.pdf",
+    profilePicPath: "/assets/ibad.png",
     about: [
         "I'm a passionate Frontend Developer with a strong foundation in HTML, CSS, JavaScript, TypeScript, React.js, and Next.js. My journey started with a background in Commerce, giving me a unique ability to build human-centered solutions with practical impact.",
         "I'm currently enrolled in the Governor Sindh’s GIAIC program, where I’ve completed the first quarter focused on modern web development. Now, I’m exploring Full-Stack Development using Node.js, Express.js, and MongoDB, along with Agentic AI tools like the OpenAI Agents SDK.",

@@ -47,12 +47,12 @@ export default function Hero() {
       {/* Image Section */}
       <div className="w-[90%] md:w-[40%] lg:w-1/2 mx-auto flex items-center mt-6 md:mt-0">
         <Image
-          src={"/assets/ibad.png"}
+          src={RESUME_DATA.profilePicPath}
           alt="Profile Photo"
           width={400}
           height={400}
-          className="rounded-full object-cover mx-auto shadow-xl shadow-secondary-foreground/20 transition-transform hover:scale-105 duration-500"
-        ></Image>
+          className="object-cover mx-auto border-2 border-secondary-foreground transition-transform hover:scale-105 duration-500 rounded-[60%_40%_30%_70%/60%_30%_70%_40%]"
+        />
       </div>
     </div>
   )
