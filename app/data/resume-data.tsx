@@ -31,12 +31,12 @@ export const RESUME_DATA = {
         social: [
             {
                 name: "LinkedIn",
-                url: "https://linkedin.com/in/ibad-ur-rehman-developer",
+                url: "https://linkedin.com/in/ibad363",
                 icon: BsLinkedin,
             },
             {
                 name: "X",
-                url: "https://x.com/ibaddeveloper",
+                url: "https://x.com/ibad363",
                 icon: BsTwitterX,
             },
             {
