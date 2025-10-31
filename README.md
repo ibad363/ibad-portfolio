@@ -68,6 +68,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Ibad - [@ibad_363](https://twitter.com/ibad_363) - ibad.salman.363@gmail.com
+Ibad - [@ibad363](https://x.com/ibad363) - hafizibadurrehman363@gmail.com
 
 Project Link: [https://github.com/ibad363/ibad-portfolio](https://github.com/ibad363/ibad-portfolio)
