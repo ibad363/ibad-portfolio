@@ -6,11 +6,10 @@ import {
 } from "react-icons/fa";
 import {
     SiNextdotjs, SiTailwindcss, SiTypescript, SiMongodb,
-    SiExpress, SiPostman, SiVercel, SiSanity
+    SiExpress, SiPostman, SiVercel, SiSanity, SiOpenai
 } from "react-icons/si";
 import { TbBrandGithub } from "react-icons/tb";
 import { RiLightbulbFlashLine } from "react-icons/ri";
-import { PiCubeTransparentDuotone, PiStudentDuotone } from "react-icons/pi";
 import { BiMessageDetail } from "react-icons/bi";
 
 export const RESUME_DATA = {
@@ -20,12 +19,14 @@ export const RESUME_DATA = {
     resumePath: "/assets/Ibad_Ur_Rehman_Frontend_Developer_Resume.pdf",
     profilePicPath: "/assets/ibad.png",
     about: [
-        "I'm a passionate Frontend Developer with a strong foundation in HTML, CSS, JavaScript, TypeScript, React.js, and Next.js. My journey started with a background in Commerce, giving me a unique ability to build human-centered solutions with practical impact.",
-        "I'm currently enrolled in the Governor Sindh’s GIAIC program, where I’ve completed the first quarter focused on modern web development. Now, I’m exploring Full-Stack Development using Node.js, Express.js, and MongoDB, along with Agentic AI tools like the OpenAI Agents SDK.",
-        "I enjoy building real-world, scalable web applications and continuously strive to improve my skills through hands-on projects and learning."
+        "I’m a Full-Stack Web Developer with strong expertise in React.js, Next.js, Node.js, Express.js, and MongoDB, focused on building scalable, high-quality web applications.",
+        "My background in Commerce helps me approach development with a business mindset — building solutions that are not just functional, but practical and user-centric.",
+        "Alongside full-stack development, I build AI-powered web applications using Python and OpenAI’s Agents SDK, implementing agentic workflows, RAG systems, and Spec-Driven Development with SpecKitPlus for scalable, production-ready solutions.",
+        "I’m currently enrolled in the Governor Sindh GIAIC program, where I continue to sharpen my skills through hands-on projects and real-world problem solving.",
+        "I enjoy building modern, intelligent, and scalable applications and I’m open to remote and freelance opportunities."
     ],
     summary:
-        "I build clean, responsive, and user-friendly web applications using modern technologies like React and Next.js. \nCurrently expanding into Full-Stack Development and AI-powered apps with Node.js, MongoDB, and OpenAI SDK.",
+        "I build fast, scalable, and user-focused web applications using React, Next.js, Node.js, Express, and MongoDB, enhanced with AI-driven features.\n I work with modern AI tools like OpenAI Agents SDK, RAG systems, MCP servers, and Spec-Driven Development (SpecKitPlus) to design intelligent, production-ready solutions. ",
     contact: {
         email: "hafizibadurrehman363@gmail.com",
         social: [
@@ -48,10 +49,22 @@ export const RESUME_DATA = {
     },
     education: [
         {
+            school: "Virtual University of Pakistan (VU)",
+            degree: "Bachelor of Science in Computer Science (BSCS)",
+            start: "2025",
+            end: "Present",
+        },
+        {
             school: "Panaversity, GIAIC",
             degree: "Certified Cloud Native Applied Agentic AI Engineer",
             start: "2024",
             end: "Present",
+        },
+        {
+            school: "Government Monotechnic Institute, Karachi",
+            degree: "DAE in CIT (Computer Information Technology)",
+            start: "2022",
+            end: "2025",
         },
         {
             school: "Goverment Degree College, Gulshan e Iqbal",
@@ -85,7 +98,7 @@ export const RESUME_DATA = {
 
         // AI
         { name: "Python", icon: <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" className="w-10 h-10" /> },
-        { name: "OpenAI SDK", icon: <PiCubeTransparentDuotone className="text-violet-400 text-3xl" /> },
+        { name: "OpenAI SDK", icon: <SiOpenai className="text-white-400 text-3xl" /> },
 
         // Soft Skills
         { name: "Problem Solving", icon: <RiLightbulbFlashLine className="text-yellow-300 text-3xl" /> },
@@ -93,6 +106,45 @@ export const RESUME_DATA = {
         { name: "Self Learning", icon: <FaBookReader className="text-sky-300 text-3xl" /> },
     ],
     projects: [
+        {
+            title: "Aura One (Earbuds E-commerce)",
+            techStack: [
+                "Client Live Project",
+                "Next.js",
+                "Tailwind CSS",
+                "Sanity CMS",
+            ],
+            description:
+                "A production-ready e-commerce website for a consumer electronics brand, built with Next.js and Sanity CMS, focused on performance, responsiveness, and a clean shopping experience.",
+            link: "https://auraone.pk/",
+        },
+
+        {
+            title: "Physical AI & Humanoid Robotics (AI Book)",
+            techStack: [
+                "Hackathon Project",
+                "Docusaurus",
+                "OpenAI Agents SDK",
+                "RAG",
+                "SpecKitPlus",
+            ],
+            description:
+                "An AI-generated and spec-driven educational book on Physical AI and Humanoid Robotics, built using Docusaurus and enhanced with a RAG-powered chatbot using OpenAI Agents SDK.",
+            link: "https://ibad363.github.io/ai-book-new/",
+        },
+
+        {
+            title: "Full-Stack Weather AI Agent",
+            techStack: [
+                "Next.js",
+                "Python",
+                "OpenAI Agents SDK",
+                "Weather API",
+            ],
+            description:
+                "A full-stack AI-powered weather assistant that fetches real-time weather data using external APIs and processes queries through an intelligent agent built with OpenAI Agents SDK.",
+            link: "https://github.com/ibad363/AI-Agents-Projects/tree/main/01_fullstack_weather_agent",
+        },
         {
             title: "Furniro (Furniture Store)",
             techStack: [
@@ -171,7 +223,7 @@ export const RESUME_DATA = {
                 "CSS",
             ],
             description:
-            "A UI practice project cloning the Salesforce landing page using only HTML and CSS for layout and styling.",
+                "A UI practice project cloning the Salesforce landing page using only HTML and CSS for layout and styling.",
             link: "https://salesforce-ibad.vercel.app",
         },
         {

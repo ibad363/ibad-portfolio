@@ -20,6 +20,9 @@ const interBold = localFont({
 export const metadata: Metadata = {
   title: "Ibad Ur Rehman",
   description: "Ibad Ur Rehman Portfolio",
+  icons: {
+    icon: "/icon.svg",
+  },
 };
 
 export default function RootLayout({

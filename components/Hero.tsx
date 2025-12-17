@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="w-full md:w-[60%] lg:w-1/2 p-6 flex flex-col items-center md:items-start my-auto gap-5">
         <div className="font-bold flex flex-col items-center md:items-start gap-3">
           <h1 className="text-3xl md:text-4xl text-center md:text-start">Hi, I'm <span className="font-interBold">{RESUME_DATA.name}</span></h1>
-          <h3 className="text-2xl md:text-3xl text-center md:text-start">React / Next.JS Frontend Developer</h3>
+          <h3 className="text-2xl md:text-3xl text-center md:text-start">AI-Powered Full-Stack Web Developer</h3>
           <div className="w-36 h-1 bg-muted-foreground rounded-lg"></div>
         </div>
         {/* Summary */}
