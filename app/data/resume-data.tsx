@@ -107,6 +107,19 @@ export const RESUME_DATA = {
     ],
     projects: [
         {
+            title: "Aura Task (AI-Powered Todo Application)",
+            techStack: [
+                "Full-Stack Project",
+                "Next.js",
+                "MongoDB",
+                "OpenAI Agents SDK",
+                "MCP Tools",
+            ],
+            description:
+                "A full-stack todo application that supports adding, updating, and deleting tasks through a simple UI. The project is enhanced with AI-powered conversational features, allowing users to manage todos using natural language commands. OpenAI Agents SDK with MCP tools is used to interpret user prompts and perform CRUD operations intelligently, showcasing real-world AI agent integration.",
+            link: "https://aurataskbyibad.vercel.app/",
+        },
+        {
             title: "Aura One (Earbuds E-commerce)",
             techStack: [
                 "Client Live Project",
@@ -118,7 +131,19 @@ export const RESUME_DATA = {
                 "A production-ready e-commerce website for a consumer electronics brand, built with Next.js and Sanity CMS, focused on performance, responsiveness, and a clean shopping experience.",
             link: "https://auraone.pk/",
         },
-
+        {
+            title: "Solar Load Calculator & Product Recommendation System",
+            techStack: [
+                "Client Live Project",
+                "Next.js",
+                "Tailwind CSS",
+                "Node.js",
+                "Admin Panel",
+            ],
+            description:
+                "A client-based solar energy platform that allows users to calculate their home power load based on appliance usage. The system intelligently recommends suitable solar products according to calculated load and available client stock. It also features a company portfolio showcasing installed projects, along with an admin panel to manage products, inventory, and portfolio content, similar to an e-commerce dashboard.",
+            link: "https://zeeshanandbrothers.vercel.app/",
+        },
         {
             title: "Physical AI & Humanoid Robotics (AI Book)",
             techStack: [
