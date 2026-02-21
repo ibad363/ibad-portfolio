@@ -1,37 +1,51 @@
-import Image from "next/image"
-import Link from "next/link"
-import { RESUME_DATA } from "../app/data/resume-data"
+import Image from "next/image";
+import Link from "next/link";
+import { RESUME_DATA } from "../app/data/resume-data";
 
 const About = () => {
-  return (
-    <div className="py-8 flex flex-col md:flex-row" id="about">
-        {/* Image Section */}
-        <div className="w-[90%] md:w-[50%] lg:w-[40%] p-4 mx-auto">
-            <Image
-                src={RESUME_DATA.profilePicPath}
-                alt="Profile Photo"
-                width={400}
-                height={400}
-                className="rounded-lg object-cover mx-auto border-2 border-secondary-foreground transform hover:scale-105 transition-transform duration-300"
-            ></Image>
-        </div>
+    return (
+        <section className="relative overflow-hidden bg-[#111318] py-16 md:py-20 px-6 md:px-12" id="about">
+            {/* Subtle background orb */}
+            <div className="glow-orb w-[300px] h-[300px] bg-indigo-600/5 -top-20 -right-20 pointer-events-none" />
 
-        {/* Paragraph Section */}
-        <div className="w-[80%] md:w-[50%] lg:w-[60%] mx-auto px-4 md:px-10 lg:px-16 flex flex-col items-center md:items-start gap-6">
-            <h1 className="text-3xl md:text-4xl font-bold text-secondary-foreground">About Me</h1>
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-12 lg:gap-20 mx-auto max-w-5xl">
 
-            <div className="w-20 h-1 bg-muted-foreground rounded-lg"></div>
+                {/* ── Image ─────────────────────────── */}
+                <div className="w-[65%] sm:w-[50%] md:w-[40%] flex-shrink-0 animate-fade-in-left">
+                    <div className="relative p-[2px] rounded-2xl bg-gradient-to-br from-indigo-500/40 via-violet-500/20 to-transparent">
+                        <Image
+                            src={RESUME_DATA.profilePicPath}
+                            alt="Profile Photo"
+                            width={400}
+                            height={400}
+                            className="w-full h-full object-cover rounded-2xl hover:scale-[1.02] transition-transform duration-500"
+                        />
+                    </div>
+                </div>
 
-            <div className="space-y-3 text-secondary-foreground/80 text-lg text-center md:text-start">
-                {RESUME_DATA.about.map((para, idx)=>(
-                    <p key={idx}>{para}</p>
-                ))}
+                {/* ── Content ──────────────────────── */}
+                <div className="flex flex-col items-center md:items-start gap-6 animate-fade-in-right">
+                    <div className="flex flex-col items-center md:items-start gap-3">
+                        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-indigo-400">Get to know me</p>
+                        <h2 className="section-heading text-center md:text-start">About Me</h2>
+                        <div className="section-divider w-12" />
+                    </div>
+
+                    <div className="space-y-4 text-gray-400 text-base leading-relaxed text-center md:text-start">
+                        {RESUME_DATA.about.map((para, idx) => (
+                            <p key={idx}>{para}</p>
+                        ))}
+                    </div>
+
+                    <Link href={RESUME_DATA.resumePath} target="_blank">
+                        <button className="btn-primary px-8 py-3 text-sm">
+                            View CV
+                        </button>
+                    </Link>
+                </div>
             </div>
+        </section>
+    );
+};
 
-            <Link target="_blank" href={RESUME_DATA.resumePath}><button className="bg-primary-foreground text-primary text-lg font-semibold rounded-lg py-2 px-8 hover:bg-secondary-foreground/80 transition-all duration-300 focus:outline-none">View CV</button></Link>
-        </div>
-    </div>
-  )
-}
-
-export default About
+export default About;

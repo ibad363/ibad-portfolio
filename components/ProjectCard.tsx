@@ -1,10 +1,3 @@
-import {
-  Card,
-  CardHeader,
-  CardContent,
-  CardDescription,
-  CardTitle,
-} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "lucide-react";
 
@@ -17,41 +10,60 @@ interface Props {
 
 export function ProjectCard({ title, description, tags, link }: Props) {
   return (
-    <Card className="group relative flex flex-col border border-gray-800/50 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-md transition hover:scale-[1.015] hover:shadow-lg hover:border-gray-400/30 hover:border-1 duration-300 overflow-hidden">
-      <CardHeader className="pb-2 space-y-1">
-        <CardTitle className="text-base font-semibold text-white group-hover:text-gray-100 transition-colors duration-200">
+    <div className="group relative flex flex-col rounded-2xl overflow-hidden
+      bg-[#111318] border border-white/[0.07]
+      hover:border-indigo-500/35 hover:shadow-glow-sm
+      transition-all duration-350 hover:-translate-y-1"
+    >
+      {/* Top accent gradient line — slides in on hover */}
+      <div className="absolute top-0 inset-x-0 h-[2px]
+        bg-gradient-to-r from-indigo-500 to-violet-500
+        scale-x-0 group-hover:scale-x-100
+        transition-transform duration-400 origin-left z-10" />
+
+      {/* Card Content */}
+      <div className="flex flex-col gap-3 p-6 flex-1">
+        {/* Title */}
+        <h3 className="text-[15px] font-semibold text-white leading-snug group-hover:text-indigo-300 transition-colors duration-200">
           {link ? (
             <a
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 hover:text-gray-300 duration-300 transition-colors"
+              className="inline-flex items-center gap-2 hover:text-indigo-300 transition-colors duration-200"
             >
               {title}
-              <ExternalLink size={14} className="text-gray-400 hover:text-gray-300 duration-300 transition-colors" />
+              <ExternalLink
+                size={13}
+                className="text-gray-500 group-hover:text-indigo-400 transition-colors duration-200 flex-shrink-0"
+              />
             </a>
           ) : (
             title
           )}
-        </CardTitle>
-        <CardDescription className="text-sm text-gray-400">
-          {description}
-        </CardDescription>
-      </CardHeader>
+        </h3>
 
-      <CardContent className="mt-auto">
-        <div className="flex flex-wrap gap-2 mt-3">
+        {/* Description */}
+        <p className="text-sm text-gray-400 leading-relaxed flex-1">
+          {description}
+        </p>
+
+        {/* Tech Tags */}
+        <div className="flex flex-wrap gap-2 mt-2">
           {tags.map((tag) => (
-            <Badge
+            <span
               key={tag}
-              variant="secondary"
-              className="bg-gray-800/70 text-gray-300 text-[11px] px-2 py-0.5 rounded-sm cursor-default"
+              className="inline-flex items-center rounded-full px-2.5 py-0.5
+                text-[11px] font-medium tracking-wide
+                bg-indigo-950/60 text-indigo-300
+                border border-indigo-500/20
+                cursor-default"
             >
               {tag}
-            </Badge>
+            </span>
           ))}
         </div>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   );
 }

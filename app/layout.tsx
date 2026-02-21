@@ -33,9 +33,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`font-inter ${inter.variable} ${interBold.variable} antialiased bg-[#1E201E]`}
+        suppressHydrationWarning
+        className={`font-inter ${inter.variable} ${interBold.variable} antialiased`}
       >
-        <Analytics/>
+        <Analytics />
         <Navbar />
         <div className="mx-auto max-w-[110rem]">
           {children}

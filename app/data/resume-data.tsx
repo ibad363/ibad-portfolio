@@ -192,18 +192,18 @@ export const RESUME_DATA = {
             description: "A dynamic blog application built with Next.js and Sanity CMS. Designed for developers to publish, manage, and explore technical articles effortlessly.",
             link: "https://dev-sphere-ibad.vercel.app"
         },
-        {
-            title: "Printable Resume Builder",
-            techStack: [
-                "Hackathon Project",
-                "HTML",
-                "CSS",
-                "TypeScript",
-            ],
-            description:
-                "A dynamic resume builder application created with HTML, CSS & TypeScript, allowing users to create & print professional resumes.",
-            link: "https://resume-builder-ibad.vercel.app"
-        },
+        // {
+        //     title: "Printable Resume Builder",
+        //     techStack: [
+        //         "Hackathon Project",
+        //         "HTML",
+        //         "CSS",
+        //         "TypeScript",
+        //     ],
+        //     description:
+        //         "A dynamic resume builder application created with HTML, CSS & TypeScript, allowing users to create & print professional resumes.",
+        //     link: "https://resume-builder-ibad.vercel.app"
+        // },
         {
             title: "E-commerce Website UI Clone",
             techStack: [
@@ -216,41 +216,41 @@ export const RESUME_DATA = {
                 "A modern e-commerce UI clone built with Next.js and Tailwind CSS to practice responsive layouts and product listing components.",
             link: "https://e-commerce-ibad.vercel.app",
         },
-        {
-            title: "Static Interactive Resume",
-            techStack: [
-                "Hackathon Project",
-                "HTML",
-                "CSS",
-                "TypeScript",
-            ],
-            description:
-                "An interactive resume built using HTML, CSS, and TypeScript, showcasing professional experience and skills in an engaging way.",
-            link: "https://hackathon-ibad.vercel.app/milestone1-2/index.html"
-        },
-        {
-            title: "PakWheels Landing Page Clone",
-            techStack: [
-                "Class Assignment",
-                "Next.js",
-                "Tailwind CSS",
-                "TypeScript",
-            ],
-            description:
-                "A responsive landing page clone with Next.js and Tailwind CSS, featuring responsive design and interactive user interface.",
-            link: "https://pakwheels-ibad.vercel.app"
-        },
-        {
-            title: "Salesforce Landing Page UI",
-            techStack: [
-                "Practice Project",
-                "HTML",
-                "CSS",
-            ],
-            description:
-                "A UI practice project cloning the Salesforce landing page using only HTML and CSS for layout and styling.",
-            link: "https://salesforce-ibad.vercel.app",
-        },
+        // {
+        //     title: "Static Interactive Resume",
+        //     techStack: [
+        //         "Hackathon Project",
+        //         "HTML",
+        //         "CSS",
+        //         "TypeScript",
+        //     ],
+        //     description:
+        //         "An interactive resume built using HTML, CSS, and TypeScript, showcasing professional experience and skills in an engaging way.",
+        //     link: "https://hackathon-ibad.vercel.app/milestone1-2/index.html"
+        // },
+        // {
+        //     title: "PakWheels Landing Page Clone",
+        //     techStack: [
+        //         "Class Assignment",
+        //         "Next.js",
+        //         "Tailwind CSS",
+        //         "TypeScript",
+        //     ],
+        //     description:
+        //         "A responsive landing page clone with Next.js and Tailwind CSS, featuring responsive design and interactive user interface.",
+        //     link: "https://pakwheels-ibad.vercel.app"
+        // },
+        // {
+        //     title: "Salesforce Landing Page UI",
+        //     techStack: [
+        //         "Practice Project",
+        //         "HTML",
+        //         "CSS",
+        //     ],
+        //     description:
+        //         "A UI practice project cloning the Salesforce landing page using only HTML and CSS for layout and styling.",
+        //     link: "https://salesforce-ibad.vercel.app",
+        // },
         {
             title: "Secure Data Encryption",
             techStack: [
@@ -298,16 +298,16 @@ export const RESUME_DATA = {
                 "An interactive app to check password strength using various security metrics with a simple Streamlit UI.",
             link: "https://github.com/ibad363/quarter-3-assignments/tree/main/02-password-strength-meter",
         },
-        {
-            title: "Personal Library Manager",
-            techStack: [
-                "Assignment Project",
-                "Python",
-                "CLI",
-            ],
-            description:
-                "A command-line interface (CLI) project to manage your personal book library including add, list, search, and delete functionality.",
-            link: "https://github.com/ibad363/quarter-3-assignments/tree/main/03-personal-library-manager",
-        },
+        // {
+        //     title: "Personal Library Manager",
+        //     techStack: [
+        //         "Assignment Project",
+        //         "Python",
+        //         "CLI",
+        //     ],
+        //     description:
+        //         "A command-line interface (CLI) project to manage your personal book library including add, list, search, and delete functionality.",
+        //     link: "https://github.com/ibad363/quarter-3-assignments/tree/main/03-personal-library-manager",
+        // },
     ],
 } as const;
