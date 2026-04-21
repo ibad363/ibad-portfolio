@@ -6,7 +6,8 @@ import {
 } from "react-icons/fa";
 import {
     SiNextdotjs, SiTailwindcss, SiTypescript, SiMongodb,
-    SiExpress, SiPostman, SiVercel, SiSanity, SiOpenai
+    SiExpress, SiPostman, SiVercel, SiSanity, SiOpenai,
+    SiFastapi, SiPostgresql
 } from "react-icons/si";
 import { TbBrandGithub } from "react-icons/tb";
 import { RiLightbulbFlashLine } from "react-icons/ri";
@@ -20,14 +21,13 @@ export const RESUME_DATA = {
     resumePath: "/assets/Ibad_Ur_Rehman_AI_Developer.pdf",
     profilePicPath: "/assets/ibad.png",
     about: [
-        "I’m a Full-Stack Web Developer with strong expertise in React.js, Next.js, Node.js, Express.js, and MongoDB, focused on building scalable, high-quality web applications.",
-        "My background in Commerce helps me approach development with a business mindset — building solutions that are not just functional, but practical and user-centric.",
-        "Alongside full-stack development, I build AI-powered web applications using Python and OpenAI’s Agents SDK, implementing agentic workflows, RAG systems, and Spec-Driven Development with SpecKitPlus for scalable, production-ready solutions.",
-        "I’m currently enrolled in the Governor Sindh GIAIC program, where I continue to sharpen my skills through hands-on projects and real-world problem solving.",
-        "I enjoy building modern, intelligent, and scalable applications and I’m open to remote and freelance opportunities."
+        "I am an AI & Full-Stack Developer specializing in building LLM-powered applications, agentic workflows, and Retrieval-Augmented Generation (RAG) systems. With strong expertise in Next.js, TypeScript, Python, FastAPI, and MongoDB, I focus on delivering scalable and intelligent web solutions.",
+        "I have hands-on experience designing and developing autonomous AI agents using the OpenAI Agents SDK and integrating external tools and APIs into complex workflows. I follow Spec-Driven Development principles to create production-ready applications capable of planning, reasoning, and executing multi-step tasks.",
+        "My background in Commerce helps me approach software development with a business-centric mindset. This allows me to build robust engineering solutions that are not just functional, but highly practical and aligned with real-world user needs.",
+        "I am currently furthering my skills in Web Development & Agentic AI through the Governor Sindh IT Initiative (GIAIC). I thrive on problem-solving, crafting modern architectures, and I am always looking for remote and freelance opportunities to create innovative solutions."
     ],
     summary:
-        "I build fast, scalable, and user-focused web applications using React, Next.js, Node.js, Express, and MongoDB, enhanced with AI-driven features.\n I work with modern AI tools like OpenAI Agents SDK, RAG systems, MCP servers, and Spec-Driven Development (SpecKitPlus) to design intelligent, production-ready solutions. ",
+        "AI Developer with hands-on experience building LLM-powered applications, agentic workflows, and Retrieval-Augmented Generation (RAG) systems. Skilled in designing context-aware AI solutions using OpenAI Agents SDK, FastAPI, and Next.js, with a strong focus on integrating external tools and APIs into intelligent workflows. Experienced in developing autonomous AI agents capable of planning, reasoning, and executing multi-step tasks in production environments.",
     contact: {
         email: "hafizibadurrehman363@gmail.com",
         social: [
@@ -48,18 +48,33 @@ export const RESUME_DATA = {
             },
         ],
     },
+    experience: [
+        {
+            company: "Self Projects",
+            role: "AI-Focused Full Stack Developer",
+            start: "Feb 2024",
+            end: "Present",
+            description: [
+                "Delivered full-stack and frontend solutions for clients and personal projects",
+                "Built production-ready web applications using React, Next.js, Node.js, and FastAPI",
+                "Integrated AI-powered features using RAG systems and agentic workflows",
+                "Designed scalable APIs and admin dashboards for real-world use cases",
+                "Followed spec-driven development and clean architecture principles"
+            ]
+        }
+    ],
     education: [
         {
             school: "Virtual University of Pakistan (VU)",
-            degree: "Bachelor of Science in Computer Science (BSCS)",
+            degree: "BSCS (Bachelor in Computer Science)",
             start: "2025",
-            end: "Present",
+            end: "Ongoing",
         },
         {
             school: "Panaversity, GIAIC",
             degree: "Certified Cloud Native Applied Agentic AI Engineer",
             start: "2024",
-            end: "Present",
+            end: "Ongoing",
         },
         {
             school: "Government Monotechnic Institute, Karachi",
@@ -87,7 +102,9 @@ export const RESUME_DATA = {
         // Backend
         { name: "Node.js", icon: <FaNodeJs className="text-green-600 text-3xl" /> },
         { name: "Express.js", icon: <SiExpress className="text-white text-3xl" /> },
+        { name: "FastAPI", icon: <SiFastapi className="text-teal-500 text-3xl" /> },
         { name: "MongoDB", icon: <SiMongodb className="text-green-500 text-3xl" /> },
+        { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-500 text-3xl" /> },
 
         // CMS & Tools
         { name: "Sanity.io", icon: <SiSanity className="text-red-500 text-3xl" /> },
