@@ -31,7 +31,7 @@ export default function Hero() {
               <span className="accent-gradient-text">{RESUME_DATA.name}</span>
             </h1>
             <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-400 text-center md:text-start">
-              AI-Powered Full-Stack Web Developer
+              {RESUME_DATA.role}
             </h2>
             <div className="w-16 h-[3px] rounded-full bg-gradient-to-r from-indigo-500 to-violet-500" />
           </div>

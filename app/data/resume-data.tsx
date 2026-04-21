@@ -14,9 +14,10 @@ import { BiMessageDetail } from "react-icons/bi";
 
 export const RESUME_DATA = {
     name: "Ibad Ur Rehman",
+    role: "AI Developer (LLMs, RAG & Agentic Systems)",
     location: "Based in Karachi Pakistan",
     locationLink: "https://www.google.com/maps/place/Karachi",
-    resumePath: "/assets/Ibad_Ur_Rehman_Frontend_Developer_Resume.pdf",
+    resumePath: "/assets/Ibad_Ur_Rehman_AI_Developer.pdf",
     profilePicPath: "/assets/ibad.png",
     about: [
         "I’m a Full-Stack Web Developer with strong expertise in React.js, Next.js, Node.js, Express.js, and MongoDB, focused on building scalable, high-quality web applications.",
