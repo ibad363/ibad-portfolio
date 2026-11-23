@@ -5,32 +5,33 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-white/[0.06] bg-[#0a0c10]">
-      <div className="px-6 md:px-10 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 mx-auto max-w-[110rem]">
+    <footer className="border-t border-white/[0.07] bg-[#070709]">
+      <div className="px-[1.5rem] lg:px-[3rem] py-[1.5rem] flex flex-col sm:flex-row items-center justify-between gap-[1rem] mx-auto max-w-[76rem]">
 
         {/* Brand + Copyright */}
-        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-5">
-          <Link href="/" className="text-base font-bold text-white hover:text-indigo-400 transition-colors duration-300">
-            Ibad<span className="text-indigo-400">.</span>
+        <div className="flex flex-col sm:flex-row items-center gap-[0.5rem] sm:gap-[1.25rem]">
+          <Link href="/" className="text-[1rem] font-bold text-white transition-colors duration-200">
+            Ibad<span className="accent-gradient-text">.</span>
           </Link>
-          <span className="hidden sm:block w-px h-4 bg-white/15" />
-          <p className="text-sm text-gray-500">© {year} Ibad Ur Rehman. All rights reserved.</p>
+          <span className="hidden sm:block w-[0.0625rem] h-[1rem] bg-white/15" />
+          <p className="text-[0.875rem] text-zinc-400">© {year} Ibad Ur Rehman. All rights reserved.</p>
         </div>
 
         {/* Social Icons */}
-        <div className="flex gap-2.5">
+        <div className="flex gap-[0.625rem]">
           {RESUME_DATA.contact.social.map((social) => (
             <a
               key={social.name}
               href={social.url}
               target="_blank"
+              rel="noopener noreferrer"
               aria-label={social.name}
-              className="flex items-center justify-center w-9 h-9 rounded-full
-                border border-white/[0.08] bg-white/[0.04] text-gray-500
-                hover:border-indigo-500/40 hover:bg-indigo-500/10 hover:text-indigo-300
-                transition-all duration-300 hover:scale-110 active:scale-95"
+              className="flex items-center justify-center w-[2.25rem] h-[2.25rem] rounded-full
+                border border-white/[0.08] bg-white/[0.04] text-zinc-400
+                hover:border-white/30 hover:text-white
+                transition-all duration-200 hover:scale-105 active:scale-95"
             >
-              <social.icon className="h-[15px] w-[15px]" />
+              <social.icon className="h-[0.9375rem] w-[0.9375rem]" />
             </a>
           ))}
         </div>

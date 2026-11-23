@@ -23,30 +23,32 @@ export default function Skills() {
       : RESUME_DATA.skills.filter((skill) => skill.category === activeCategory);
 
   return (
-    <section className="relative overflow-hidden bg-[#111318] py-16 md:py-20 px-6 md:px-12" id="skills">
+    <section className="relative overflow-hidden py-[4rem] sm:py-[5rem] px-[1.5rem] lg:px-[3rem] max-w-[76rem] mx-auto" id="skills">
       {/* Background accent */}
-      <div className="glow-orb w-[300px] h-[300px] bg-violet-600/5 bottom-0 left-1/2 -translate-x-1/2" />
+      <div className="glow-orb w-[22rem] h-[22rem] theme-glow-orb-2 bottom-0 left-1/2 -translate-x-1/2 opacity-20" />
 
       {/* Section Header */}
-      <div className="relative z-10 text-center mb-10 animate-fade-in-up">
-        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-indigo-400 mb-3">Technical Stack</p>
+      <div className="relative z-10 text-center mb-[2.5rem] animate-fade-in-up">
+        <span className="theme-badge px-[0.875rem] py-[0.3rem] rounded-full text-[0.75rem] font-semibold tracking-wider uppercase inline-block mb-[0.75rem]">
+          Technical Stack
+        </span>
         <h2 className="section-heading">Skills & Tooling</h2>
-        <div className="section-divider w-12 mx-auto mt-3" />
-        <p className="text-gray-400 text-center max-w-xl mx-auto text-sm md:text-base leading-relaxed mt-3">
+        <div className="w-[3rem] h-[0.1875rem] rounded-full section-divider mx-auto mt-[0.75rem]" />
+        <p className="text-zinc-400 text-center max-w-[36rem] mx-auto text-[0.9375rem] sm:text-[1rem] leading-[1.6] mt-[0.75rem]">
           Technologies and systems I leverage to build scalable backends, autonomous AI agents, and production web apps.
         </p>
       </div>
 
       {/* Category Filter Pills */}
-      <div className="relative z-10 flex flex-wrap justify-center gap-2 mb-10 max-w-3xl mx-auto">
+      <div className="relative z-10 flex flex-wrap justify-center gap-[0.5rem] mb-[2.5rem] max-w-[48rem] mx-auto">
         {CATEGORIES.map((cat) => (
           <button
             key={cat}
             onClick={() => setActiveCategory(cat)}
-            className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
+            className={`px-[1rem] py-[0.375rem] rounded-full text-[0.75rem] font-medium transition-all duration-200 ${
               activeCategory === cat
-                ? "bg-indigo-600 text-white shadow-glow-sm border border-indigo-400/40"
-                : "bg-[#0d0f14] text-gray-400 hover:text-white border border-white/5 hover:border-white/15"
+                ? "theme-badge shadow-md font-semibold"
+                : "bg-white/[0.04] text-zinc-400 hover:text-white border border-white/5 hover:border-white/15"
             }`}
           >
             {cat}
@@ -55,24 +57,21 @@ export default function Skills() {
       </div>
 
       {/* Skills Grid */}
-      <div className="relative z-10 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4 lg:gap-5 place-items-center max-w-6xl mx-auto">
+      <div className="relative z-10 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-[1rem] lg:gap-[1.25rem] place-items-center max-w-[72rem] mx-auto">
         {filteredSkills.map((skill) => (
           <div
             key={skill.name}
-            className="group relative flex flex-col items-center justify-center gap-3
-              w-28 h-28 rounded-2xl text-center px-2
-              bg-[#0d0f14] border border-white/[0.07]
-              hover:border-indigo-500/40 hover:bg-indigo-500/5
-              hover:shadow-glow-sm
-              transition-all duration-300 hover:-translate-y-1 cursor-default"
+            className="group relative flex flex-col items-center justify-center gap-[0.75rem]
+              w-[6.75rem] h-[6.75rem] rounded-[1rem] text-center px-[0.5rem] glass-card
+              transition-all duration-200 hover:-translate-y-0.5 cursor-default"
           >
             {/* Icon glow bg */}
-            <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-white/5 group-hover:bg-indigo-500/10 transition-colors duration-300">
-              <span className="group-hover:scale-110 transition-transform duration-300 block">
+            <div className="flex items-center justify-center w-[2.5rem] h-[2.5rem] rounded-[0.75rem] stat-icon-box transition-colors duration-200">
+              <span className="group-hover:scale-105 transition-transform duration-200 block">
                 {skill.icon}
               </span>
             </div>
-            <p className="text-[11px] font-medium text-gray-400 group-hover:text-gray-200 transition-colors duration-300 leading-tight">
+            <p className="text-[0.6875rem] font-medium text-zinc-300 group-hover:text-white transition-colors duration-150 leading-tight">
               {skill.name}
             </p>
           </div>

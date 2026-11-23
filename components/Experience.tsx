@@ -2,42 +2,42 @@ import { RESUME_DATA } from "../app/data/resume-data";
 
 export function Experience() {
   return (
-    <section className="relative overflow-hidden py-16 md:py-20 px-6 md:px-12" id="experience">
+    <section className="relative overflow-hidden py-[4rem] sm:py-[5rem] px-[1.5rem] lg:px-[3rem] max-w-[76rem] mx-auto" id="experience">
       {/* Section Header */}
-      <div className="text-center mb-14 animate-fade-in-up">
-        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-indigo-400 mb-3">My Career</p>
-        <h2 className="section-heading">Experience</h2>
-        <div className="section-divider w-12 mx-auto mt-3" />
+      <div className="text-center mb-[3rem] animate-fade-in-up">
+        <span className="theme-badge px-[0.875rem] py-[0.3rem] rounded-full text-[0.75rem] font-semibold tracking-wider uppercase inline-block mb-[0.75rem]">
+          Track Record
+        </span>
+        <h2 className="section-heading">Professional Experience</h2>
+        <div className="w-[3rem] h-[0.1875rem] rounded-full section-divider mx-auto mt-[0.75rem]" />
       </div>
 
-      <div className="flex flex-col gap-8 max-w-3xl mx-auto">
+      <div className="flex flex-col gap-[1.5rem] max-w-[48rem] mx-auto">
         {RESUME_DATA.experience.map((exp) => (
           <div
             key={exp.company}
-            className="group relative glass-card flex flex-col md:flex-row gap-6 p-6 md:p-8
-              hover:border-indigo-500/30 hover:shadow-glow-sm
-              transition-all duration-300 hover:-translate-y-1"
+            className="group relative glass-card flex flex-col md:flex-row gap-[1.25rem] p-[1.5rem] md:p-[2rem] rounded-[1rem]
+              transition-all duration-200 hover:-translate-y-0.5"
           >
             {/* Top accent line on hover */}
-            <div className="absolute top-0 inset-x-0 h-[2px] rounded-t-2xl
-              bg-gradient-to-r from-indigo-500 to-violet-500
-              scale-x-0 group-hover:scale-x-100
-              transition-transform duration-400 origin-left" />
+            <div className="absolute top-0 inset-x-0 h-[0.125rem] rounded-t-[1rem]
+              section-divider scale-x-0 group-hover:scale-x-100
+              transition-transform duration-300 origin-left" />
 
             <div className="md:w-1/3 shrink-0">
-              <h3 className="text-lg font-bold text-white mb-1 group-hover:text-indigo-300 transition-colors duration-200">
+              <h3 className="text-[1.125rem] font-bold text-white mb-[0.25rem] group-hover:text-zinc-200 transition-colors duration-150">
                 {exp.role}
               </h3>
-              <div className="text-sm font-medium text-indigo-400 mb-2">
+              <div className="text-[0.75rem] font-semibold theme-pill px-[0.625rem] py-[0.25rem] rounded-[0.375rem] inline-block mb-[0.5rem] w-fit">
                 {exp.company}
               </div>
-              <div className="text-xs font-medium text-gray-500 tabular-nums uppercase tracking-wider">
+              <div className="text-[0.75rem] font-medium text-zinc-400 tabular-nums uppercase tracking-wider block">
                 {exp.start} – {exp.end}
               </div>
             </div>
 
             <div className="md:w-2/3">
-              <ul className="space-y-2 text-sm text-gray-400 leading-relaxed list-disc list-outside ml-4">
+              <ul className="space-y-[0.5rem] text-[0.875rem] text-zinc-300 leading-[1.6] list-disc list-outside ml-[1rem]">
                 {exp.description.map((point, i) => (
                   <li key={i}>{point}</li>
                 ))}

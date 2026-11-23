@@ -9,13 +9,13 @@ import { Experience } from "@/components/Experience";
 export default function Home() {
   return (
     <>
-      <Hero/>
-      <About/>
-      <Experience/>
-      <Education/>
-      <Skills/>
-      <Projects/>
-      <Contact/>
+      <Hero />
+      <About />
+      <Experience />
+      <Education />
+      <Skills />
+      <Projects />
+      <Contact />
     </>
   );
 }

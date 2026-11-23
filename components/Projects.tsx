@@ -12,22 +12,24 @@ function Projects() {
   const otherProjects = RESUME_DATA.projects.filter((p) => !p.featured);
 
   return (
-    <section className="relative overflow-hidden py-16 md:py-20 px-6 md:px-12" id="projects">
+    <section className="relative overflow-hidden py-[4rem] sm:py-[5rem] px-[1.5rem] lg:px-[3rem] max-w-[76rem] mx-auto" id="projects">
       {/* Background orb */}
-      <div className="glow-orb w-[300px] h-[300px] bg-indigo-600/6 -top-10 -right-20" />
+      <div className="glow-orb w-[20rem] h-[20rem] theme-glow-orb-1 -top-[3rem] -right-[5rem] opacity-20" />
 
       {/* Section Header */}
-      <div className="relative z-10 flex flex-col items-center gap-3 mb-14 animate-fade-in-up">
-        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-indigo-400">Featured Work</p>
+      <div className="relative z-10 flex flex-col items-center gap-[0.75rem] mb-[3rem] text-center">
+        <span className="theme-badge px-[0.875rem] py-[0.3rem] rounded-full text-[0.75rem] font-semibold tracking-wider uppercase">
+          Featured Work
+        </span>
         <h2 className="section-heading text-center">Projects & Systems Built</h2>
-        <div className="section-divider w-12" />
-        <p className="text-gray-400 text-center max-w-2xl text-sm md:text-base leading-relaxed mt-2">
+        <div className="w-[3rem] h-[0.1875rem] rounded-full section-divider" />
+        <p className="text-zinc-400 text-center max-w-[38rem] text-[0.9375rem] sm:text-[1rem] leading-[1.6] mt-[0.5rem]">
           Production systems, client deliverables, and autonomous AI agentic workflows designed to solve practical business problems and automate operations.
         </p>
       </div>
 
       {/* Featured Projects Grid */}
-      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.5rem]">
         {featuredProjects.map((project) => (
           <ProjectCard
             key={project.title}
@@ -42,16 +44,16 @@ function Projects() {
 
       {/* Additional / Archive Projects */}
       {showAll && (
-        <div className="relative z-10 mt-12 animate-fade-in-up">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="h-px bg-white/10 flex-1" />
-            <span className="text-xs font-semibold tracking-wider uppercase text-gray-500">
+        <div className="relative z-10 mt-[3rem]">
+          <div className="flex items-center gap-[1rem] mb-[1.5rem]">
+            <div className="h-[0.0625rem] bg-white/10 flex-1" />
+            <span className="text-[0.75rem] font-semibold tracking-wider uppercase text-zinc-400">
               Additional Projects & Utilities
             </span>
-            <div className="h-px bg-white/10 flex-1" />
+            <div className="h-[0.0625rem] bg-white/10 flex-1" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1.5rem]">
             {otherProjects.map((project) => (
               <ProjectCard
                 key={project.title}
@@ -68,20 +70,20 @@ function Projects() {
 
       {/* Toggle Button */}
       {otherProjects.length > 0 && (
-        <div className="relative z-10 flex justify-center mt-12">
+        <div className="relative z-10 flex justify-center mt-[3rem]">
           <button
             onClick={() => setShowAll(!showAll)}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 bg-white/5 text-gray-300 text-sm font-medium hover:border-indigo-500/40 hover:bg-indigo-500/10 hover:text-indigo-300 transition-all duration-300 active:scale-95"
+            className="inline-flex items-center gap-[0.5rem] px-[1.5rem] py-[0.75rem] rounded-[0.75rem] border border-white/10 glass-card text-zinc-300 text-[0.875rem] font-medium hover:text-white transition-all duration-200 active:scale-95"
           >
             {showAll ? (
               <>
                 <span>Show Less</span>
-                <ChevronUp className="w-4 h-4 text-indigo-400" />
+                <ChevronUp className="w-[1rem] h-[1rem] stat-icon-color" />
               </>
             ) : (
               <>
                 <span>View More Projects ({otherProjects.length})</span>
-                <ChevronDown className="w-4 h-4 text-indigo-400" />
+                <ChevronDown className="w-[1rem] h-[1rem] stat-icon-color" />
               </>
             )}
           </button>

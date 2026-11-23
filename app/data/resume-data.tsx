@@ -39,11 +39,11 @@ export const RESUME_DATA = {
     resumePath: "https://drive.google.com/file/d/1AJSq9SdfkgdcT2lVPHLKRu5Ljfm6FApg/view?usp=sharing",
     profilePicPath: "/assets/ibad.png",
     summary:
-        "Forward Deployed Engineer combining around 3 years of hands-on software development experience with 16 months of professional experience in business operations. Experienced in developing practical software solutions, automating workflows, managing business data, and deploying autonomous AI agentic systems. Combines rapid AI adoption, technical problem-solving, and cross-functional business understanding to bridge operations with engineering and deliver high-impact results.",
+        "Forward Deployed Engineer specializing in turning business bottlenecks into production software, autonomous AI agent workflows, and practical automations. Combines hands-on software engineering with real-world business operations experience to bridge business needs with technical execution, adopting cutting-edge AI tools to deliver measurable results.",
     about: [
-        "Outcome-Driven Engineering: I focus on delivering tangible business results rather than just writing code. Combining around 3 years of hands-on software development with 16 months of professional experience in business operations, I bridge the gap between operational bottlenecks and practical software solutions.",
+        "Outcome-Driven Engineering: I focus on delivering tangible business results rather than just writing code. Combining hands-on full-stack development with real-world operational experience, I bridge the gap between business bottlenecks and practical software solutions.",
         "Rapid AI Adoption & Applied Systems: The AI ecosystem evolves rapidly, and my core strength is quick learning and hands-on adaptation. I build and deploy production-ready LLM applications, context-aware RAG pipelines, and autonomous agentic workflows using OpenAI Agents SDK, Claude Code, and Antigravity to automate multi-step processes.",
-        "Operational Roots & Business Mindset: With a background in Commerce and hands-on experience managing data verification, administrative operations, recruitment coordination, and customer workflows, I approach architecture with deep user empathy, measurable business impact, and practical usability.",
+        "Operational Roots & Business Mindset: With a background in commerce and hands-on experience in business data, customer support, and administrative workflows, I approach architecture with deep user empathy, measurable business impact, and practical usability.",
         "Continuous Growth & Forward Deployment: Currently pursuing my BSCS at Virtual University of Pakistan and advancing in Agentic AI with the Governor Sindh IT Initiative (GIAIC). Always open to forward-deployed engineering, remote, and high-impact opportunities."
     ],
     contact: {

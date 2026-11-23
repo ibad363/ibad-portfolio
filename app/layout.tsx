@@ -70,7 +70,7 @@ export default function RootLayout({
       >
         <Analytics />
         <Navbar />
-        <div className="mx-auto max-w-[110rem]">
+        <div className="w-full">
           {children}
         </div>
         <Footer />

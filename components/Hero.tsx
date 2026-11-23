@@ -1,114 +1,123 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BsWhatsapp } from "react-icons/bs";
+import { Bot, Cpu, Layers, MapPin, ArrowUpRight } from "lucide-react";
 import { RESUME_DATA } from "../app/data/resume-data";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden py-16 md:py-20 lg:py-24">
-      {/* Background Gradient Orbs */}
-      <div className="glow-orb w-[400px] h-[400px] bg-indigo-600/10 -top-32 -left-32" />
-      <div className="glow-orb w-[300px] h-[300px] bg-violet-600/8 top-10 -right-20" />
-      <div className="glow-orb w-[250px] h-[250px] bg-indigo-500/6 bottom-0 left-1/3" />
+    <section className="relative overflow-hidden min-h-[calc(100vh-4.5rem)] flex items-center py-[2rem] sm:py-[2.5rem] lg:py-[3rem] px-[1.5rem] sm:px-[2rem] lg:px-[3rem] max-w-[76rem] mx-auto">
+      {/* Background Subtle Ambient Glow */}
+      <div className="glow-orb w-[24rem] h-[24rem] theme-glow-orb-1 -top-[6rem] -left-[6rem] opacity-30" />
+      <div className="glow-orb w-[20rem] h-[20rem] theme-glow-orb-2 top-[2rem] -right-[4rem] opacity-20" />
 
-      <div className="relative z-10 w-full flex flex-col-reverse md:flex-row items-center gap-10 px-6 md:px-12 mx-auto">
+      <div className="relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 items-center gap-[2rem] lg:gap-[3rem]">
 
-        {/* ── Text Section ─────────────────────────────── */}
-        <div className="w-full md:w-[60%] flex flex-col items-center md:items-start gap-6">
+        {/* ── Left Column: Outcome-Focused Messaging (7 cols) ────────── */}
+        <div className="lg:col-span-7 flex flex-col items-center lg:items-start gap-[1rem] sm:gap-[1.25rem] text-center lg:text-left">
 
-          {/* Available badge */}
-          <div className="animate-fade-in-up inline-flex items-center gap-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 px-4 py-1.5 text-xs font-medium text-indigo-300">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-400" />
+          {/* Availability pill matching LinkedIn banner */}
+          <div className="inline-flex items-center gap-[0.5rem] rounded-full px-[0.875rem] py-[0.3rem] text-[0.75rem] font-semibold theme-badge">
+            <span className="relative flex h-[0.5rem] w-[0.5rem]">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-[0.5rem] w-[0.5rem] bg-emerald-400" />
             </span>
-            Available for Forward Deployed & Full-Stack Roles
+            <span>OPEN FOR REMOTE ROLES & CONTRACTS</span>
           </div>
 
-          {/* Heading */}
-          <div className="animate-fade-in-up-delay-1 flex flex-col items-center md:items-start gap-3">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-center md:text-start leading-[1.1]">
-              <span className="gradient-text">Hi, I'm </span>
-              <span className="accent-gradient-text">{RESUME_DATA.name}</span>
+          {/* Heading & Role Hierarchy */}
+          <div className="flex flex-col gap-[0.5rem]">
+            <h1 className="text-[2.25rem] sm:text-[2.75rem] lg:text-[3.25rem] font-extrabold tracking-tight leading-[1.1] text-white">
+              Hi, I'm <span className="accent-gradient-text">{RESUME_DATA.name}</span>
             </h1>
-            <h2 className="text-2xl sm:text-3xl font-semibold text-gray-200 text-center md:text-start">
-              {RESUME_DATA.role}
-            </h2>
-            <p className="text-base sm:text-lg font-medium text-indigo-400 text-center md:text-start max-w-xl">
-              {RESUME_DATA.tagline}
-            </p>
-            <div className="w-16 h-[3px] rounded-full bg-gradient-to-r from-indigo-500 to-violet-500" />
+
+            <div className="flex flex-col gap-[0.25rem]">
+              <span className="text-[1.25rem] sm:text-[1.5rem] lg:text-[1.65rem] font-extrabold uppercase tracking-wide text-white leading-tight">
+                BUILDING AI-POWERED BUSINESS SYSTEMS
+              </span>
+              <p className="text-[0.9375rem] sm:text-[1rem] font-medium text-zinc-300 leading-snug">
+                Forward Deployed Engineer • Turning Business Problems into Production-Ready AI & Custom Software
+              </p>
+            </div>
+
+            <div className="flex items-center justify-center lg:justify-start gap-[0.5rem] text-[0.8125rem] font-medium text-zinc-400 pt-[0.25rem]">
+              <MapPin className="w-[0.875rem] h-[0.875rem] text-zinc-400 flex-shrink-0" />
+              <span>Karachi, Pakistan</span>
+              <span className="text-zinc-600">•</span>
+              <span className="text-zinc-300">Available Globally for Remote Roles</span>
+            </div>
+
+            <div className="w-[3.5rem] h-[0.125rem] rounded-full section-divider mx-auto lg:mx-0 mt-[0.25rem]" />
           </div>
 
-          {/* Summary */}
-          <p className="animate-fade-in-up-delay-2 text-gray-400 text-base md:text-lg leading-relaxed text-center md:text-start max-w-xl whitespace-pre-line">
-            {RESUME_DATA.summary}
+          {/* Concise Outcome Statement */}
+          <p className="text-zinc-300 text-[0.9375rem] sm:text-[1rem] leading-[1.6] max-w-[34rem]">
+            I engineer practical software solutions, autonomous AI agent workflows, and business management systems that automate operations, eliminate manual bottlenecks, and deliver measurable business outcomes.
           </p>
 
-          {/* Social Links */}
-          <div className="animate-fade-in-up-delay-3 flex flex-col items-center md:items-start gap-3">
-            <p className="text-sm text-gray-500 font-medium tracking-wider uppercase">Connect with me</p>
-            <div className="flex gap-3 items-center flex-wrap justify-center md:justify-start">
-              {RESUME_DATA.contact.social.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={social.name}
-                  className="group flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-white/5 text-gray-400
-                    hover:border-indigo-500/50 hover:bg-indigo-500/10 hover:text-indigo-300
-                    transition-all duration-300 hover:scale-110 hover:shadow-glow-sm active:scale-95"
-                >
-                  <social.icon className="h-[18px] w-[18px]" />
-                </a>
-              ))}
-            </div>
+          {/* 3 Outcome Pillars from LinkedIn banner */}
+          <div className="flex flex-wrap gap-[0.5rem] justify-center lg:justify-start">
+            <span className="theme-pill inline-flex items-center gap-[0.375rem] px-[0.75rem] py-[0.3rem] rounded-full text-[0.75rem] font-semibold">
+              <Bot className="w-[0.875rem] h-[0.875rem] text-zinc-300" />
+              AI Agents
+            </span>
+            <span className="theme-pill inline-flex items-center gap-[0.375rem] px-[0.75rem] py-[0.3rem] rounded-full text-[0.75rem] font-semibold">
+              <Cpu className="w-[0.875rem] h-[0.875rem] text-zinc-300" />
+              Workflow Automation
+            </span>
+            <span className="theme-pill inline-flex items-center gap-[0.375rem] px-[0.75rem] py-[0.3rem] rounded-full text-[0.75rem] font-semibold">
+              <Layers className="w-[0.875rem] h-[0.875rem] text-zinc-300" />
+              Custom AI Solutions
+            </span>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="animate-fade-in-up-delay-4 flex flex-wrap items-center gap-3 w-full sm:w-auto justify-center md:justify-start">
+          {/* Action Buttons - Always above the fold! */}
+          <div className="flex flex-wrap items-center gap-[0.75rem] justify-center lg:justify-start pt-[0.25rem]">
             <a
               href={RESUME_DATA.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 text-sm font-semibold rounded-xl
+              className="inline-flex items-center justify-center gap-[0.5rem] px-[1.375rem] py-[0.6875rem] text-[0.875rem] font-semibold rounded-[0.75rem]
                 bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-600/20
-                hover:shadow-emerald-600/30 transition-all duration-300 active:scale-95"
+                hover:shadow-emerald-600/30 transition-all duration-200 active:translate-y-px"
             >
-              <BsWhatsapp className="text-lg" />
-              Chat on WhatsApp
+              <BsWhatsapp className="text-[1rem]" />
+              Start on WhatsApp
             </a>
             <Link
               href="/#projects"
-              className="btn-primary px-6 py-3 text-sm inline-flex items-center justify-center"
+              className="btn-primary px-[1.375rem] py-[0.6875rem] text-[0.875rem] inline-flex items-center justify-center rounded-[0.75rem]"
             >
-              View Projects
+              View Built Systems
             </Link>
-            <Link
-              href="/#contact"
-              className="btn-ghost px-6 py-3 text-sm inline-flex items-center justify-center"
+            <a
+              href={RESUME_DATA.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-ghost px-[1.375rem] py-[0.6875rem] text-[0.875rem] inline-flex items-center justify-center rounded-[0.75rem]"
             >
-              Contact Me
-            </Link>
+              View CV
+            </a>
           </div>
         </div>
 
-        {/* ── Image Section ────────────────────────────── */}
-        <div className="w-[60%] sm:w-[45%] md:w-[40%] mx-auto md:mx-0 flex-shrink-0 animate-fade-in-right">
-          <div className="relative">
-            {/* Glow ring behind image */}
-            <div className="absolute inset-0 rounded-[60%_40%_30%_70%/60%_30%_70%_40%] bg-gradient-to-br from-indigo-600/30 to-violet-600/20 blur-2xl scale-110 animate-float" />
-            {/* Gradient border wrapper */}
-            <div className="relative p-[3px] rounded-[60%_40%_30%_70%/60%_30%_70%_40%] bg-gradient-to-br from-indigo-500/60 via-violet-500/40 to-transparent animate-float">
-              <Image
-                src={RESUME_DATA.profilePicPath}
-                alt="Profile Photo"
-                width={460}
-                height={460}
-                priority
-                className="object-cover w-full h-full rounded-[60%_40%_30%_70%/60%_30%_70%_40%] hover:scale-[1.02] transition-transform duration-700"
-              />
+        {/* ── Right Column: Balanced Portrait in rem (5 cols) ─────────── */}
+        <div className="lg:col-span-5 flex items-center justify-center">
+          <div className="relative w-[16rem] h-[16rem] sm:w-[18rem] sm:h-[18rem] lg:w-[21rem] lg:h-[21rem]">
+            {/* Subtle glow halo */}
+            <div className="absolute inset-0 rounded-full theme-photo-glow blur-2xl scale-105" />
+
+            {/* Circular Border with subtle inner ring */}
+            <div className="relative p-[0.1875rem] rounded-full theme-photo-border w-full h-full shadow-2xl">
+              <div className="relative w-full h-full rounded-full overflow-hidden bg-zinc-950">
+                <Image
+                  src={RESUME_DATA.profilePicPath}
+                  alt={RESUME_DATA.name}
+                  fill
+                  priority
+                  className="object-cover hover:scale-105 transition-transform duration-500"
+                />
+              </div>
             </div>
           </div>
         </div>

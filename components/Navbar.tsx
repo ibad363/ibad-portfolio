@@ -28,95 +28,95 @@ const Navbar = () => {
 
     return (
         <div
-            className={`sticky top-0 z-50 transition-all duration-500 ${scrolled
-                    ? "bg-[#0d0f14]/85 backdrop-blur-xl border-b border-white/[0.06] shadow-[0_4px_30px_rgba(0,0,0,0.4)]"
+            className={`sticky top-0 z-50 transition-all duration-300 ${scrolled
+                    ? "bg-[#070709]/90 backdrop-blur-xl border-b border-white/[0.08] shadow-[0_0.25rem_2rem_rgba(0,0,0,0.5)]"
                     : "bg-transparent border-b border-transparent"
                 }`}
         >
-            <header className="flex items-center justify-between gap-4 px-6 md:px-10 py-4 mx-auto max-w-[110rem]">
+            <header className="flex items-center justify-between gap-[1rem] px-[1.5rem] lg:px-[3rem] h-[4.25rem] mx-auto max-w-[76rem]">
                 {/* Logo */}
                 <Link href="/" className="flex-shrink-0 group">
-                    <span className="text-lg font-bold tracking-tight text-white group-hover:text-indigo-400 transition-colors duration-300">
-                        Ibad<span className="text-indigo-400 group-hover:text-white transition-colors duration-300">.</span>
+                    <span className="text-[1.125rem] font-bold tracking-tight text-white transition-colors duration-200">
+                        Ibad<span className="accent-gradient-text">.</span>
                     </span>
                 </Link>
 
                 {/* Desktop Nav */}
-                <nav className="hidden md:flex items-center gap-1">
+                <nav className="hidden md:flex items-center gap-[0.25rem] lg:gap-[0.5rem]">
                     {NAV_ITEMS.map(({ label, href }) => (
                         <NavLink key={label} href={href} label={label} />
                     ))}
                 </nav>
 
                 {/* Quick Action Buttons */}
-                <div className="hidden md:flex items-center gap-3 flex-shrink-0">
+                <div className="hidden md:flex items-center gap-[0.75rem] flex-shrink-0">
                     <a
                         href={RESUME_DATA.whatsappUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-semibold rounded-lg
+                        className="inline-flex items-center gap-[0.375rem] px-[0.75rem] py-[0.375rem] text-[0.75rem] font-semibold rounded-[0.5rem]
                             border border-emerald-500/30 bg-emerald-500/10 text-emerald-300
-                            hover:bg-emerald-500/20 hover:border-emerald-500/50 transition-all duration-300"
+                            hover:bg-emerald-500/20 hover:border-emerald-500/50 transition-all duration-200"
                     >
-                        <BsWhatsapp className="text-sm" />
+                        <BsWhatsapp className="text-[0.875rem]" />
                         WhatsApp
                     </a>
                     <a
                         href={RESUME_DATA.resumeUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-primary text-sm py-2 px-5 inline-flex items-center gap-2"
+                        className="btn-primary text-[0.8125rem] py-[0.4375rem] px-[1.125rem] inline-flex items-center gap-[0.375rem] rounded-[0.5rem]"
                     >
                         View CV
-                        <ExternalLink className="w-3.5 h-3.5" />
+                        <ExternalLink className="w-[0.8125rem] h-[0.8125rem]" />
                     </a>
                 </div>
 
                 {/* Mobile Hamburger */}
                 <button
-                    className="md:hidden flex flex-col gap-[5px] p-2 rounded-lg hover:bg-white/5 transition-colors"
+                    className="md:hidden flex flex-col gap-[0.3125rem] p-[0.5rem] rounded-[0.5rem] hover:bg-white/5 transition-colors"
                     onClick={() => setMenuOpen(!menuOpen)}
                     aria-label="Toggle menu"
                 >
-                    <span className={`block w-5 h-[2px] bg-white transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-[7px]" : ""}`} />
-                    <span className={`block w-5 h-[2px] bg-white transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
-                    <span className={`block w-5 h-[2px] bg-white transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-[7px]" : ""}`} />
+                    <span className={`block w-[1.25rem] h-[0.125rem] bg-white transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-[0.4375rem]" : ""}`} />
+                    <span className={`block w-[1.25rem] h-[0.125rem] bg-white transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
+                    <span className={`block w-[1.25rem] h-[0.125rem] bg-white transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-[0.4375rem]" : ""}`} />
                 </button>
             </header>
 
             {/* Mobile Menu */}
             <div
-                className={`md:hidden overflow-hidden transition-all duration-300 ${menuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-                    } bg-[#0d0f14]/95 backdrop-blur-xl border-b border-white/[0.06]`}
+                className={`md:hidden overflow-hidden transition-all duration-300 ${menuOpen ? "max-h-[24rem] opacity-100" : "max-h-0 opacity-0"
+                    } bg-[#070709]/95 backdrop-blur-xl border-b border-white/[0.08]`}
             >
-                <nav className="flex flex-col px-6 py-4 gap-1">
+                <nav className="flex flex-col px-[1.5rem] py-[1rem] gap-[0.25rem]">
                     {NAV_ITEMS.map(({ label, href }) => (
                         <Link
                             key={label}
                             href={href}
                             onClick={() => setMenuOpen(false)}
-                            className="text-sm text-gray-400 hover:text-white hover:bg-white/5 px-3 py-2 rounded-lg transition-all duration-200"
+                            className="text-[0.875rem] text-gray-400 hover:text-white hover:bg-white/5 px-[0.75rem] py-[0.5rem] rounded-[0.5rem] transition-all duration-200"
                         >
                             {label}
                         </Link>
                     ))}
-                    <div className="flex flex-col gap-2 mt-3 pt-3 border-t border-white/10">
+                    <div className="flex flex-col gap-[0.5rem] mt-[0.75rem] pt-[0.75rem] border-t border-white/10">
                         <a
                             href={RESUME_DATA.whatsappUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-emerald-500/30 bg-emerald-500/10 text-emerald-300 text-sm font-semibold"
+                            className="inline-flex items-center justify-center gap-[0.5rem] px-[1rem] py-[0.625rem] rounded-[0.5rem] border border-emerald-500/30 bg-emerald-500/10 text-emerald-300 text-[0.875rem] font-semibold"
                         >
-                            <BsWhatsapp className="text-base" />
+                            <BsWhatsapp className="text-[1rem]" />
                             Chat on WhatsApp
                         </a>
                         <a
                             href={RESUME_DATA.resumeUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="btn-primary text-sm py-2 px-5 inline-flex items-center justify-center gap-2"
+                            className="btn-primary text-[0.875rem] py-[0.625rem] px-[1.25rem] inline-flex items-center justify-center gap-[0.5rem] rounded-[0.5rem]"
                         >
-                            View CV <ExternalLink className="w-3.5 h-3.5" />
+                            View CV <ExternalLink className="w-[0.875rem] h-[0.875rem]" />
                         </a>
                     </div>
                 </nav>
@@ -131,10 +131,10 @@ function NavLink({ href, label }: { href: string; label: string }) {
     return (
         <Link
             href={href}
-            className="relative px-3 py-2 text-sm text-gray-400 hover:text-white rounded-lg hover:bg-white/5 transition-all duration-200 group"
+            className="relative px-[0.625rem] lg:px-[0.75rem] py-[0.375rem] text-[0.8125rem] lg:text-[0.875rem] text-zinc-400 hover:text-white rounded-[0.5rem] hover:bg-white/5 transition-all duration-200 group"
         >
             {label}
-            <span className="absolute bottom-1 left-3 right-3 h-[2px] rounded-full bg-indigo-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+            <span className="absolute bottom-[0.25rem] left-[0.625rem] right-[0.625rem] h-[0.125rem] rounded-full section-divider scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left" />
         </Link>
     );
 }

@@ -1,37 +1,39 @@
 import Image from "next/image";
-import Link from "next/link";
 import { RESUME_DATA } from "../app/data/resume-data";
 
 const About = () => {
     return (
-        <section className="relative overflow-hidden bg-[#111318] py-16 md:py-20 px-6 md:px-12" id="about">
+        <section className="relative overflow-hidden py-[4rem] sm:py-[5rem] px-[1.5rem] lg:px-[3rem] max-w-[76rem] mx-auto" id="about">
             {/* Subtle background orb */}
-            <div className="glow-orb w-[300px] h-[300px] bg-indigo-600/5 -top-20 -right-20 pointer-events-none" />
+            <div className="glow-orb w-[22rem] h-[22rem] theme-glow-orb-1 -top-[4rem] -right-[4rem] pointer-events-none opacity-20" />
 
-            <div className="relative z-10 flex flex-col md:flex-row items-center gap-12 lg:gap-20 mx-auto max-w-5xl">
+            <div className="relative z-10 flex flex-col md:flex-row items-center gap-[2.5rem] lg:gap-[4rem]">
 
                 {/* ── Image ─────────────────────────── */}
-                <div className="w-[65%] sm:w-[50%] md:w-[40%] flex-shrink-0 animate-fade-in-left">
-                    <div className="relative p-[2px] rounded-2xl bg-gradient-to-br from-indigo-500/40 via-violet-500/20 to-transparent">
-                        <Image
-                            src={RESUME_DATA.profilePicPath}
-                            alt="Profile Photo"
-                            width={400}
-                            height={400}
-                            className="w-full h-full object-cover rounded-2xl hover:scale-[1.02] transition-transform duration-500"
-                        />
+                <div className="w-[14rem] sm:w-[16rem] md:w-[18rem] lg:w-[20rem] flex-shrink-0">
+                    <div className="relative p-[0.1875rem] rounded-[1.25rem] theme-photo-border shadow-2xl">
+                        <div className="relative w-full aspect-square rounded-[1.125rem] overflow-hidden bg-black/80">
+                            <Image
+                                src={RESUME_DATA.profilePicPath}
+                                alt="Profile Photo"
+                                fill
+                                className="object-cover hover:scale-[1.02] transition-transform duration-300"
+                            />
+                        </div>
                     </div>
                 </div>
 
                 {/* ── Content ──────────────────────── */}
-                <div className="flex flex-col items-center md:items-start gap-6 animate-fade-in-right">
-                    <div className="flex flex-col items-center md:items-start gap-3">
-                        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-indigo-400">Get to know me</p>
+                <div className="flex flex-col items-center md:items-start gap-[1.25rem]">
+                    <div className="flex flex-col items-center md:items-start gap-[0.5rem]">
+                        <span className="theme-badge px-[0.875rem] py-[0.3rem] rounded-full text-[0.75rem] font-semibold tracking-wider uppercase">
+                            Get to know me
+                        </span>
                         <h2 className="section-heading text-center md:text-start">About Me</h2>
-                        <div className="section-divider w-12" />
+                        <div className="w-[3rem] h-[0.1875rem] rounded-full section-divider" />
                     </div>
 
-                    <div className="space-y-4 text-gray-400 text-base leading-relaxed text-center md:text-start">
+                    <div className="space-y-[0.75rem] text-zinc-300 text-[0.9375rem] sm:text-[1rem] leading-[1.65] text-center md:text-start">
                         {RESUME_DATA.about.map((para, idx) => {
                             const colonIndex = para.indexOf(":");
                             if (colonIndex !== -1) {
@@ -39,7 +41,7 @@ const About = () => {
                                 const content = para.slice(colonIndex + 1);
                                 return (
                                     <p key={idx}>
-                                        <span className="font-semibold text-gray-200">{heading}:</span>
+                                        <span className="font-semibold text-white">{heading}:</span>
                                         {content}
                                     </p>
                                 );
@@ -48,12 +50,12 @@ const About = () => {
                         })}
                     </div>
 
-                    <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-[1rem] pt-[0.5rem]">
                         <a
                             href={RESUME_DATA.resumeUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="btn-primary px-8 py-3 text-sm inline-flex items-center"
+                            className="btn-primary px-[1.5rem] py-[0.6875rem] text-[0.875rem] inline-flex items-center rounded-[0.75rem]"
                         >
                             View CV
                         </a>
@@ -61,7 +63,7 @@ const About = () => {
                             href={RESUME_DATA.whatsappUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="btn-ghost px-6 py-3 text-sm inline-flex items-center text-emerald-400 hover:text-emerald-300"
+                            className="btn-ghost px-[1.375rem] py-[0.6875rem] text-[0.875rem] inline-flex items-center text-emerald-400 hover:text-emerald-300 rounded-[0.75rem]"
                         >
                             WhatsApp Me
                         </a>
