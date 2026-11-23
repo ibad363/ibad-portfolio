@@ -49,14 +49,14 @@ const About = () => {
                     </div>
 
                     <div className="flex items-center gap-4">
-                        <Link
-                            href={RESUME_DATA.resumePath}
+                        <a
+                            href={RESUME_DATA.resumeUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-primary px-8 py-3 text-sm inline-flex items-center"
                         >
                             View CV
-                        </Link>
+                        </a>
                         <a
                             href={RESUME_DATA.whatsappUrl}
                             target="_blank"

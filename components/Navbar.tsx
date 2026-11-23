@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { AiOutlineCloudDownload } from "react-icons/ai";
 import { BsWhatsapp } from "react-icons/bs";
+import { ExternalLink } from "lucide-react";
 import { RESUME_DATA } from "../app/data/resume-data";
 import { useEffect, useState } from "react";
 
@@ -61,15 +61,15 @@ const Navbar = () => {
                         <BsWhatsapp className="text-sm" />
                         WhatsApp
                     </a>
-                    <Link
-                        href={RESUME_DATA.resumePath}
+                    <a
+                        href={RESUME_DATA.resumeUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-primary text-sm py-2 px-5 inline-flex items-center gap-2"
                     >
-                        Download CV
-                        <AiOutlineCloudDownload className="text-base" />
-                    </Link>
+                        View CV
+                        <ExternalLink className="w-3.5 h-3.5" />
+                    </a>
                 </div>
 
                 {/* Mobile Hamburger */}
@@ -110,14 +110,14 @@ const Navbar = () => {
                             <BsWhatsapp className="text-base" />
                             Chat on WhatsApp
                         </a>
-                        <Link
-                            href={RESUME_DATA.resumePath}
+                        <a
+                            href={RESUME_DATA.resumeUrl}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-primary text-sm py-2 px-5 inline-flex items-center justify-center gap-2"
                         >
-                            Download CV <AiOutlineCloudDownload className="text-base" />
-                        </Link>
+                            View CV <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
                     </div>
                 </nav>
             </div>

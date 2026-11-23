@@ -35,7 +35,8 @@ export const RESUME_DATA = {
     phone: "0317-1289624",
     whatsappUrl: "https://wa.me/923171289624",
     portfolioUrl: "https://www.itsibad.tech",
-    resumePath: "/assets/Ibad_Ur_Rehman_AI_Developer.pdf",
+    resumeUrl: "https://drive.google.com/file/d/1AJSq9SdfkgdcT2lVPHLKRu5Ljfm6FApg/view?usp=sharing",
+    resumePath: "https://drive.google.com/file/d/1AJSq9SdfkgdcT2lVPHLKRu5Ljfm6FApg/view?usp=sharing",
     profilePicPath: "/assets/ibad.png",
     summary:
         "Forward Deployed Engineer combining around 3 years of hands-on software development experience with 16 months of professional experience in business operations. Experienced in developing practical software solutions, automating workflows, managing business data, and deploying autonomous AI agentic systems. Combines rapid AI adoption, technical problem-solving, and cross-functional business understanding to bridge operations with engineering and deliver high-impact results.",
