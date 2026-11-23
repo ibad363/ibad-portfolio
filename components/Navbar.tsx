@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { AiOutlineCloudDownload } from "react-icons/ai";
+import { BsWhatsapp } from "react-icons/bs";
 import { RESUME_DATA } from "../app/data/resume-data";
 import { useEffect, useState } from "react";
 
@@ -47,13 +48,29 @@ const Navbar = () => {
                     ))}
                 </nav>
 
-                {/* Download CV Button */}
-                <Link href={RESUME_DATA.resumePath} target="_blank" className="hidden md:block flex-shrink-0">
-                    <button className="btn-primary text-sm py-2 px-5">
+                {/* Quick Action Buttons */}
+                <div className="hidden md:flex items-center gap-3 flex-shrink-0">
+                    <a
+                        href={RESUME_DATA.whatsappUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-3.5 py-1.5 text-xs font-semibold rounded-lg
+                            border border-emerald-500/30 bg-emerald-500/10 text-emerald-300
+                            hover:bg-emerald-500/20 hover:border-emerald-500/50 transition-all duration-300"
+                    >
+                        <BsWhatsapp className="text-sm" />
+                        WhatsApp
+                    </a>
+                    <Link
+                        href={RESUME_DATA.resumePath}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-primary text-sm py-2 px-5 inline-flex items-center gap-2"
+                    >
                         Download CV
                         <AiOutlineCloudDownload className="text-base" />
-                    </button>
-                </Link>
+                    </Link>
+                </div>
 
                 {/* Mobile Hamburger */}
                 <button
@@ -83,11 +100,25 @@ const Navbar = () => {
                             {label}
                         </Link>
                     ))}
-                    <Link href={RESUME_DATA.resumePath} target="_blank" className="mt-2">
-                        <button className="btn-primary text-sm py-2 px-5 w-full justify-center">
+                    <div className="flex flex-col gap-2 mt-3 pt-3 border-t border-white/10">
+                        <a
+                            href={RESUME_DATA.whatsappUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-emerald-500/30 bg-emerald-500/10 text-emerald-300 text-sm font-semibold"
+                        >
+                            <BsWhatsapp className="text-base" />
+                            Chat on WhatsApp
+                        </a>
+                        <Link
+                            href={RESUME_DATA.resumePath}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-primary text-sm py-2 px-5 inline-flex items-center justify-center gap-2"
+                        >
                             Download CV <AiOutlineCloudDownload className="text-base" />
-                        </button>
-                    </Link>
+                        </Link>
+                    </div>
                 </nav>
             </div>
         </div>

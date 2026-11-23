@@ -1,73 +1,61 @@
-# ibad-portfolio
+# Ibad Ur Rehman — Portfolio
 
-This is my personal portfolio website.
+Forward Deployed Engineer | Building Practical Software & AI Agents That Automate Real-World Workflows.
 
-## Live Demo
+## Live Website
 
-You can view the live demo of my portfolio at [https://ibad-dev.vercel.app/](https://ibad-dev.vercel.app/)
+View the live portfolio at: [https://www.itsibad.tech](https://www.itsibad.tech)
 
 ## Technologies Used
 
-* Next.js
+* Next.js 15 (App Router)
 * TypeScript
-* Tailwind CSS
-* Framer Motion
+* Tailwind CSS & tailwindcss-animate
+* Lucide React & React Icons
+* Vercel Analytics
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
-
 ### Prerequisites
 
+* Node.js 18+
 * npm
-```sh
-npm install npm@latest -g
-```
 
 ### Installation
 
-1. Clone the repo
+1. Clone the repository:
 ```sh
 git clone https://github.com/ibad363/ibad-portfolio.git
+cd ibad-portfolio
 ```
-2. Install NPM packages
+
+2. Install dependencies:
 ```sh
 npm install
 ```
 
-## Usage
+### Development
 
-To start the development server, run:
+Run the development server:
 ```sh
 npm run dev
 ```
 
-To build the project for production, run:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### Production Build
+
 ```sh
 npm run build
-```
-
-To start the production server, run:
-```sh
 npm run start
 ```
 
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
 ## Contact
 
-Ibad - [@ibad363](https://x.com/ibad363) - hafizibadurrehman363@gmail.com
-
-Project Link: [https://github.com/ibad363/ibad-portfolio](https://github.com/ibad363/ibad-portfolio)
+* **Name**: Ibad Ur Rehman
+* **Role**: Forward Deployed Engineer
+* **Website**: [itsibad.tech](https://www.itsibad.tech)
+* **GitHub**: [@ibad363](https://github.com/ibad363)
+* **LinkedIn**: [in/ibad363](https://www.linkedin.com/in/ibad363)
+* **Email**: hafizibadurrehman363@gmail.com
+* **WhatsApp**: [+92 317 1289624](https://wa.me/923171289624)

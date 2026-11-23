@@ -32,16 +32,40 @@ const About = () => {
                     </div>
 
                     <div className="space-y-4 text-gray-400 text-base leading-relaxed text-center md:text-start">
-                        {RESUME_DATA.about.map((para, idx) => (
-                            <p key={idx}>{para}</p>
-                        ))}
+                        {RESUME_DATA.about.map((para, idx) => {
+                            const colonIndex = para.indexOf(":");
+                            if (colonIndex !== -1) {
+                                const heading = para.slice(0, colonIndex);
+                                const content = para.slice(colonIndex + 1);
+                                return (
+                                    <p key={idx}>
+                                        <span className="font-semibold text-gray-200">{heading}:</span>
+                                        {content}
+                                    </p>
+                                );
+                            }
+                            return <p key={idx}>{para}</p>;
+                        })}
                     </div>
 
-                    <Link href={RESUME_DATA.resumePath} target="_blank">
-                        <button className="btn-primary px-8 py-3 text-sm">
+                    <div className="flex items-center gap-4">
+                        <Link
+                            href={RESUME_DATA.resumePath}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-primary px-8 py-3 text-sm inline-flex items-center"
+                        >
                             View CV
-                        </button>
-                    </Link>
+                        </Link>
+                        <a
+                            href={RESUME_DATA.whatsappUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn-ghost px-6 py-3 text-sm inline-flex items-center text-emerald-400 hover:text-emerald-300"
+                        >
+                            WhatsApp Me
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

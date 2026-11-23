@@ -1,4 +1,3 @@
-import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { RESUME_DATA } from "../app/data/resume-data";
 import { MdSchool } from "react-icons/md";
 
@@ -8,11 +7,11 @@ export function Education() {
       {/* Section Header */}
       <div className="text-center mb-14 animate-fade-in-up">
         <p className="text-xs font-semibold tracking-[0.2em] uppercase text-indigo-400 mb-3">My Background</p>
-        <h2 className="section-heading">Education</h2>
+        <h2 className="section-heading">Education & Training</h2>
         <div className="section-divider w-12 mx-auto mt-3" />
       </div>
 
-      <div className="grid gap-8 sm:grid-cols-2 max-w-3xl mx-auto">
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl mx-auto">
         {RESUME_DATA.education.map((edu) => (
           <div
             key={edu.school}

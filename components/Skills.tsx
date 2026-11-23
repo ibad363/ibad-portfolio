@@ -1,20 +1,62 @@
+"use client";
+
+import { useState } from "react";
 import { RESUME_DATA } from "../app/data/resume-data";
 
+const CATEGORIES = [
+  "All",
+  "AI & Agentic Systems",
+  "RAG & Context",
+  "Backend & APIs",
+  "Databases",
+  "Frontend",
+  "Delivery",
+  "Soft Skills",
+] as const;
+
 export default function Skills() {
+  const [activeCategory, setActiveCategory] = useState<string>("All");
+
+  const filteredSkills =
+    activeCategory === "All"
+      ? RESUME_DATA.skills
+      : RESUME_DATA.skills.filter((skill) => skill.category === activeCategory);
+
   return (
     <section className="relative overflow-hidden bg-[#111318] py-16 md:py-20 px-6 md:px-12" id="skills">
       {/* Background accent */}
       <div className="glow-orb w-[300px] h-[300px] bg-violet-600/5 bottom-0 left-1/2 -translate-x-1/2" />
 
       {/* Section Header */}
-      <div className="relative z-10 text-center mb-14 animate-fade-in-up">
-        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-indigo-400 mb-3">What I Work With</p>
-        <h2 className="section-heading">Skills</h2>
+      <div className="relative z-10 text-center mb-10 animate-fade-in-up">
+        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-indigo-400 mb-3">Technical Stack</p>
+        <h2 className="section-heading">Skills & Tooling</h2>
         <div className="section-divider w-12 mx-auto mt-3" />
+        <p className="text-gray-400 text-center max-w-xl mx-auto text-sm md:text-base leading-relaxed mt-3">
+          Technologies and systems I leverage to build scalable backends, autonomous AI agents, and production web apps.
+        </p>
       </div>
 
-      <div className="relative z-10 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4 lg:gap-5 place-items-center">
-        {RESUME_DATA.skills.map((skill) => (
+      {/* Category Filter Pills */}
+      <div className="relative z-10 flex flex-wrap justify-center gap-2 mb-10 max-w-3xl mx-auto">
+        {CATEGORIES.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setActiveCategory(cat)}
+            className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 ${
+              activeCategory === cat
+                ? "bg-indigo-600 text-white shadow-glow-sm border border-indigo-400/40"
+                : "bg-[#0d0f14] text-gray-400 hover:text-white border border-white/5 hover:border-white/15"
+            }`}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      {/* Skills Grid */}
+      <div className="relative z-10 grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4 lg:gap-5 place-items-center max-w-6xl mx-auto">
+        {filteredSkills.map((skill) => (
           <div
             key={skill.name}
             className="group relative flex flex-col items-center justify-center gap-3
